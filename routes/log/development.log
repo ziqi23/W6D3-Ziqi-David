@@ -1,2 +1,60 @@
   [1m[35m (172.6ms)[0m  [1m[35mCREATE DATABASE "routes_development" ENCODING = 'unicode'[0m
   [1m[35m (97.0ms)[0m  [1m[35mCREATE DATABASE "routes_test" ENCODING = 'unicode'[0m
+  [1m[35m (55.1ms)[0m  [1m[35mCREATE DATABASE "routes_development" ENCODING = 'unicode'[0m
+  [1m[35m (51.6ms)[0m  [1m[35mCREATE DATABASE "routes_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2023-03-08 15:11:49 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/davidgudeman/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/davidgudeman/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 527)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2801)
+
+
+Started GET "/users" for ::1 at 2023-03-08 15:14:10 -0800
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2023-03-08 15:14:35 -0800
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2023-03-08 15:15:58 -0800
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 230)
+
+
+Started GET "/users" for ::1 at 2023-03-08 15:17:15 -0800
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 579)
+
+
+Started GET "/" for ::1 at 2023-03-08 15:17:37 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/davidgudeman/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/davidgudeman/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.0ms | Allocations: 281)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 889)
+
+
+Started GET "/" for ::1 at 2023-03-08 15:17:40 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/davidgudeman/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/davidgudeman/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 215)
+
+
+Started GET "/users" for ::1 at 2023-03-08 15:17:44 -0800
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 156)
+
+
+Started GET "/users" for ::1 at 2023-03-08 15:17:54 -0800
+Processing by UsersController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 141)
+
+

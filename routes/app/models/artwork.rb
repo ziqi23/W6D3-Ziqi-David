@@ -22,9 +22,13 @@ class Artwork < ApplicationRecord
 
 
     def self.artworks_for_user_id(user_id)
-        completed_artworks = Artwork.where(artist_id: incoming_wildcard)
-        shared_artworks = ArtworkShare.where(viewer_id: incoming_wildcard)
+        completed_artworks = Artwork.where(artist_id: user_id).select('*')
+        shared_artworks = ArtworkShare.joins(:artwork).where(viewer_id: user_id).select('artworks.*')
 
+        all_artworks = completed_artworks + shared_artworks #[1, 3, 4, 6]
+
+
+         
     end
 
     validates :title, :artist_id, presence:true

@@ -3,9 +3,10 @@
 class ArtworksController < ApplicationController
 
     def index
-        incoming_wildcard = params[:id]
-       
-
+        #debugger
+        incoming_wildcard = params[:user_id]
+        all_artworks = Artwork.artworks_for_user_id(incoming_wildcard)
+        render json: all_artworks
     end
 
     def create

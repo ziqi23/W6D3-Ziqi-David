@@ -27,17 +27,28 @@ class UsersController < ApplicationController
     end
 
     def update
-
+        #debugger
+        user = User.find_by(id: params[:id])
+        if user && user.update(user_params)
+            redirect_to user_url(user.id)
+        else
+            render json: ['unprocessable entity'], status: 422
+        end
     end
 
     def destroy
-        
+        user = User.find_by(id: params[:id])
+        if user && user.destroy
+            redirect_to users_url
+        else
+            render json: ['unprocessable entity'], status: 422
+        end
     end
 
     private
 
    def  user_params 
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:username)
 
    end
 
